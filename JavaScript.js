@@ -32,16 +32,30 @@ let selectedRepresentation = ""
 
     document.getElementById('Submit').onclick = function() { 
         
+        // if there is already result already exsisting clear result or no do nothing
+    
+
         let x = document.getElementById("Genre")
         selectedGenre = x.value
         let y = document.getElementById("Representation")
         selectedRepresentation = y.value
         const results = books.filter(bookFinder)//forEach(console.log)
+        const p = document.getElementsById("result")
+        if (p) {
+            p.removeChild()
+            (removeChild)
+        
+        }
 
         const paragraph = document.createElement('p');
 
-paragraph.textContent = results[0].title;
+       
+    
 
+        //const paragraph = document.createElement('p');
+
+paragraph.textContent = results[0].title;
+document.body.getElementById("result").appendChild(paragraph)
 
 document.body.appendChild(paragraph);
         
