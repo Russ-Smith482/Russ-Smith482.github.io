@@ -22,7 +22,7 @@ function repPicked(){
 let selectedGenre = ""
 let selectedRepresentation = ""
     function bookFinder(book){
-        //return book.genre.includes(genre[selectedGenre]) && book.representation.includes(representation[selectedRepresentation])
+        
         console.log(selectedGenre, selectedRepresentation)
         const bookIncludesGenre = book.genre.includes(genre[selectedGenre])
         const bookIncludesRep = book.representation.includes(representation[selectedRepresentation])
@@ -38,7 +38,7 @@ document.getElementById('Submit').onclick = function() {
     selectedGenre = x.value
     let y = document.getElementById("Representation")
     selectedRepresentation = y.value
-    const results = books.filter(bookFinder)//forEach(console.log)
+    const results = books.filter(bookFinder)
     const p = document.getElementById("result")
     if (p) {
         console.log("removing old")
