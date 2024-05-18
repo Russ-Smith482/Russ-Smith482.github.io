@@ -23,43 +23,37 @@ let selectedGenre = ""
 let selectedRepresentation = ""
     function bookFinder(book){
         //return book.genre.includes(genre[selectedGenre]) && book.representation.includes(representation[selectedRepresentation])
-
+        console.log(selectedGenre, selectedRepresentation)
         const bookIncludesGenre = book.genre.includes(genre[selectedGenre])
         const bookIncludesRep = book.representation.includes(representation[selectedRepresentation])
 
         return bookIncludesGenre && bookIncludesRep
      }
 
-    document.getElementById('Submit').onclick = function() { 
-        
-        // if there is already result already exsisting clear result or no do nothing
-    
+document.getElementById('Submit').onclick = function() { 
+    // if there is already result already exsisting clear result or no do nothing
 
-        let x = document.getElementById("Genre")
-        selectedGenre = x.value
-        let y = document.getElementById("Representation")
-        selectedRepresentation = y.value
-        const results = books.filter(bookFinder)//forEach(console.log)
-        const p = document.getElementsById("result")
-        if (p) {
-            p.removeChild()
-            (removeChild)
-        
-        }
 
-        const paragraph = document.createElement('p');
-
-       
-    
-
-        //const paragraph = document.createElement('p');
-
-paragraph.textContent = results[0].title;
-document.body.getElementById("result").appendChild(paragraph)
-
-document.body.appendChild(paragraph);
-        
+    let x = document.getElementById("Genre")
+    selectedGenre = x.value
+    let y = document.getElementById("Representation")
+    selectedRepresentation = y.value
+    const results = books.filter(bookFinder)//forEach(console.log)
+    const p = document.getElementById("result")
+    if (p) {
+        console.log("removing old")
+        p.remove()
     }
+
+    const paragraph = document.createElement('p');
+    paragraph.id = "result";
+    
+    console.log(paragraph, p, results )
+     paragraph.textContent = results[0].title;
+
+    document.body.appendChild(paragraph);
+
+}
 
     const genre={fantasy:"Fantasy", romance:"Romance"} //TODO add all genres
     const representation={gay:"Gay M/M", lesbian:"Lesbian F/F"} // TODO add all representations
