@@ -1,3 +1,82 @@
+const genre = {
+    fantasy:"Fantasy", 
+    romance:"Romance",
+    new_adult: "New Adult",
+    suspense: "Suspense",
+    horror: "Horror",
+    fanstasy: "Fantasy",
+    dark_fantasy: "Dark Fantasy",
+    ya: "Young Adult",
+    paranormal: "Paranormal",
+    urban_fantasy: "Urban Fantasy",
+    mental_health: "Mental Health",
+    sci_fi: "SciFi"
+} 
+const representation = {
+    gay:"Gay M/M", 
+    lesbian:"Lesbian F/F",
+    bi: "Bisexual",
+    non_binary: "Non-binary",
+    trans: "Trans",
+}
+
+
+const books = [
+    {
+        title: "Cherry On Top",
+        author: "Lucas Delrose",
+        genre: [genre.fantasy, genre.new_adult, genre.romance],
+        representation: [representation.gay]
+    },
+    {
+        title: "The binding of Bloom Mountain",
+        author: "Siggy Chambers",
+        genre: [genre.horror, genre.fantasy],
+        representation: [representation.lesbian], 
+    }, 
+    {
+        title: "The Modern Mythos Anomaly",
+        author: "Juniper Lake Fitzgerald",
+        genre: [genre.dark_fantasy],
+        representation: [representation.bi],
+    },
+    {
+        title: "Umbra: Tales of a Shadow",
+        author: "Freddie Clark",
+        genre: [genre.sci_fi],
+        representation: [representation.gay, representation.bi, representation.non_binary, representation.lesbian],
+    },
+    {
+        title: "Starseer",
+        author: "Katya Hernandez",
+        genre: [genre.ya, genre.fantasy],
+        representation: [representation.gay, representation.bi],
+    },
+    {
+        title: "White Trach Warlock",
+        author: "David Slayton",
+        genre: [genre.fantasy, genre.paranormal, genre.urban_fantasy],
+        representation: [representation.gay, representation.bi],
+    },
+    {
+        title: "A Mark on my soul",
+        author: "Jordon Greene",
+        genre: [genre.ya, genre.romance, genre.mental_health ],
+        representation: [representation.gay],
+    },
+    {
+        title: "Cemetery Boys",
+        author: "Aiden Thomas",
+        genre: [genre.fantasy, genre.ya, genre.paranormal, genre.urban_fantasy],
+        representation: [representation.trans],
+    },
+    {
+        title: "no book found",
+        genre: Object.values(genre), 
+        representation: Object.values(representation),
+    }
+]
+
 function genrePicked(){
 
     if (selectedGenre == "Fantasy"){
@@ -55,22 +134,4 @@ document.getElementById('Submit').onclick = function() {
 
 }
 
-    const genre={fantasy:"Fantasy", romance:"Romance"} //TODO add all genres
-    const representation={gay:"Gay M/M", lesbian:"Lesbian F/F"} // TODO add all representations
 
-const books = [
-    {
-        title: "cherry on top",
-        genre: [genre.fantasy],
-        representation: [representation.gay]
-
-    }
-    ,
-    {
-        title: "no book found",
-        genre: [genre.fantasy, genre.romance],
-        representation: [representation.gay, representation.lesbian]
-    }
-
-    //TODO update books to create database
-]
