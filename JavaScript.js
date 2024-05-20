@@ -29,7 +29,7 @@ const books = [
         representation: [representation.gay]
     },
     {
-        title: "The binding of Bloom Mountain",
+        title: "The Binding of Bloom Mountain",
         author: "Siggy Chambers",
         genre: [genre.horror, genre.fantasy],
         representation: [representation.lesbian], 
@@ -37,8 +37,8 @@ const books = [
     {
         title: "The Modern Mythos Anomaly",
         author: "Juniper Lake Fitzgerald",
-        genre: [genre.dark_fantasy],
-        representation: [representation.bi],
+        genre: [genre.fantasy, genre.romance, genre.paranormal],
+        representation: [representation.bi, representation.gay],
     },
     {
         title: "Umbra: Tales of a Shadow",
@@ -77,27 +77,7 @@ const books = [
     }
 ]
 
-function genrePicked(){
 
-    if (selectedGenre == "Fantasy"){
-        //display a book with a fantasy genre tag
-    }
-
-    else if (selectedGenre == "Romance"){
-        //display a book with a Romance genre tag
-    }
-}
-
-function repPicked(){
-    
-        if (selectedRep == "Gay"){
-            //display a book with a gay representation tag
-        }
-    
-        else if (selectedRep == "Lesbian"){
-            //display a book with a Lesbian Representation tag
-        }
-    }
 let selectedGenre = ""
 let selectedRepresentation = ""
     function bookFinder(book){
@@ -128,8 +108,8 @@ document.getElementById('Submit').onclick = function() {
     paragraph.id = "result";
     
     console.log(paragraph, p, results )
-     paragraph.textContent = results[0].title;
-
+     paragraph.textContent = results[0].title + " by " + results[0].author;
+    
     document.body.appendChild(paragraph);
 
 }
