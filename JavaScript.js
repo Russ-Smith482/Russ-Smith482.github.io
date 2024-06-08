@@ -25,12 +25,15 @@ const books = [
     {
         title: "Cherry On Top",
         author: "Lucas Delrose",
+        cover: "https://m.media-amazon.com/images/I/71jEP6to8VL._SL1500_.jpg",
         genre: [genre.fantasy, genre.new_adult, genre.romance],
         representation: [representation.gay]
     },
     {
         title: "The Binding of Bloom Mountain",
         author: "Siggy Chambers",
+        cover: "https://m.media-amazon.com/images/I/81O309XnosL._SL1500_.jpg",
+        link: "https://www.amazon.com/Binding-Bloom-Mountain-Valley-Book-ebook/dp/B0BPDPBNVB/ref=sr_1_1",
         genre: [genre.horror, genre.fantasy],
         representation: [representation.lesbian], 
     }, 
@@ -69,13 +72,10 @@ const books = [
         author: "Aiden Thomas",
         genre: [genre.fantasy, genre.ya, genre.paranormal, genre.urban_fantasy],
         representation: [representation.trans],
-    },
-    {
-        title: "no book found",
-        genre: Object.values(genre), 
-        representation: Object.values(representation),
     }
 ]
+
+
 
 
 let selectedGenre = ""
@@ -98,19 +98,49 @@ document.getElementById('Submit').onclick = function() {
     let y = document.getElementById("Representation")
     selectedRepresentation = y.value
     const results = books.filter(bookFinder)
-    const p = document.getElementById("result")
-    if (p) {
+    const bookContainer = document.getElementById("result")
+    if (bookContainer) {
         console.log("removing old")
-        p.remove()
+        bookContainer.remove()
     }
-
+    const randomResult = getRandomResult(results)
+    console.log(randomResult);
+    function getRandomResult(resultsList)
+    {
+        const x = Math.random() * (resultsList.length-1);
+        const y = Math.floor(x);
+        return resultsList[y];
+    }
     const paragraph = document.createElement('p');
-    paragraph.id = "result";
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+    const link = document.createElement('a');
+    div.id = "result";
     
-    console.log(paragraph, p, results )
-     paragraph.textContent = results[0].title + " by " + results[0].author;
-    
-    document.body.appendChild(paragraph);
+    console.log(paragraph, bookContainer, results )
+    const hasResults = results.length > 0
+
+    if (hasResults) { 
+             paragraph.textContent = randomResult.title + " by " + randomResult.author; 
+             
+             img.src = randomResult.cover;
+
+             link.href = randomResult.link;
+             
+             link.textContent = "Click Me";
+
+             
+    }
+    else
+    {
+        paragraph.textContent = "No Book Found"
+    }
+    img.classList.add("Cover");
+    div.appendChild(paragraph);
+    div.appendChild(img);
+    div.appendChild(link);
+    document.body.appendChild(div);
+
 
 }
 
