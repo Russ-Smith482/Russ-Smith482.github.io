@@ -10,7 +10,8 @@ const genre = {
     paranormal: "Paranormal",
     urban_fantasy: "Urban Fantasy",
     mental_health: "Mental Health",
-    sci_fi: "SciFi"
+    sci_fi: "SciFi",
+    mystery: "Mystery"
 } 
 const representation = {
     gay:"Gay M/M", 
@@ -27,7 +28,7 @@ const books = [
         author: "Lucas Delrose",
         cover: "https://m.media-amazon.com/images/I/71jEP6to8VL._SL1500_.jpg",
         link: "https://www.amazon.com/Cherry-Top-Lucas-Delrose/dp/1088049516/ref=sr_1_1",
-        genre: [genre.fantasy, genre.new_adult, genre.romance],
+        genre: [genre.mystery, genre.new_adult, genre.romance],
         representation: [representation.gay]
     },
     {
@@ -75,7 +76,7 @@ const books = [
         author: "Jordon Greene",
         cover: "https://m.media-amazon.com/images/I/814evKVNUpL._SL1360_.jpg",
         link: "https://www.amazon.com/Mark-My-Soul-Jordon-Greene-ebook/dp/B07MYQQ5JD/ref=sr_1_1",
-        genre: [genre.ya, genre.romance, genre.mental_health ],
+        genre: [genre.ya, genre.romance, genre.mental_health],
         representation: [representation.gay],
     },
     {
@@ -85,6 +86,14 @@ const books = [
         link: "https://www.amazon.com/Cemetery-Boys-Aiden-Thomas/dp/1250250463/ref=sr_1_1",
         genre: [genre.fantasy, genre.ya, genre.paranormal, genre.urban_fantasy],
         representation: [representation.trans],
+    },
+    {
+        title: "Head for Murder",
+        author: "Chase Connor",
+        cover: "https://m.media-amazon.com/images/I/81alO4KDe4L._SL1500_.jpg",
+        link: "https://www.amazon.com/Head-Murder-Rock-Harbor-Mystery-ebook/dp/B0CD44RHYS/ref=sr_1_1",
+        genre: [genre.mystery],
+        representation: [representation.gay],
     }
 ]
 
@@ -120,7 +129,7 @@ document.getElementById('Submit').onclick = function() {
     console.log(randomResult);
     function getRandomResult(resultsList)
     {
-        const x = Math.random() * (resultsList.length-1);
+        const x = Math.random() * (resultsList.length);
         const y = Math.floor(x);
         return resultsList[y];
     }
@@ -140,7 +149,7 @@ document.getElementById('Submit').onclick = function() {
 
              link.href = randomResult.link;
              
-             link.textContent = "Click Me";
+             link.textContent = "Available Here";
 
              
     }
