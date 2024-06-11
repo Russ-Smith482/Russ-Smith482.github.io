@@ -1,5 +1,5 @@
 body {
-    background-color: #a3c0ff;
+    background-color: #b3e4ea;
     padding: 0px;
 }
 
@@ -7,6 +7,7 @@ h1 {
     text-align: center;
     padding-bottom: 5px;
     margin-top: -10px;
+    color: rgb(196, 14, 153);
 }
 p {
     padding: 1px;
@@ -47,4 +48,16 @@ p {
     margin-top: -8px;
     margin-bottom: -10px;
 }
-
+.team{
+    color: rgb(133, 21, 185);
+    display: inline-block;
+    font-size: 25px;
+    margin: 8px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    padding: 3px;
+}
+.bottom{
+    bottom: 0;
+    text-align-last: auto ;
+}

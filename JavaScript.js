@@ -19,6 +19,8 @@ const representation = {
     bi: "Bisexual",
     non_binary: "Non-binary",
     trans: "Trans",
+    demi: "Demisexual",
+    ace: "Ace"
 }
 
 
@@ -37,7 +39,7 @@ const books = [
         cover: "https://m.media-amazon.com/images/I/81O309XnosL._SL1500_.jpg",
         link: "https://www.amazon.com/Binding-Bloom-Mountain-Valley-Book-ebook/dp/B0BPDPBNVB/ref=sr_1_1",
         genre: [genre.horror, genre.fantasy],
-        representation: [representation.lesbian], 
+        representation: [representation.lesbian, representation.bi], 
     }, 
     {
         title: "The Modern Mythos Anomaly",
@@ -67,7 +69,7 @@ const books = [
         title: "White Trach Warlock",
         author: "David Slayton",
         cover: "https://m.media-amazon.com/images/I/91LZdFG56LL._SL1500_.jpg",
-        link: "https://www.amazon.com/White-Trash-Warlock-Binder-Novels-ebook/dp/B0BWFTGQZV/ref=sr_1_1",
+        link: "https://davidrslayton.com/",
         genre: [genre.fantasy, genre.paranormal, genre.urban_fantasy],
         representation: [representation.gay, representation.bi],
     },
@@ -94,7 +96,24 @@ const books = [
         link: "https://www.amazon.com/Head-Murder-Rock-Harbor-Mystery-ebook/dp/B0CD44RHYS/ref=sr_1_1",
         genre: [genre.mystery],
         representation: [representation.gay],
+    },
+    {
+        title: "Jack of Hearts",
+        author: "L. C. Rosen",
+        cover: "https://m.media-amazon.com/images/I/51y-cLQOiCL.jpg",
+        link: "https://www.amazon.com/Jack-Hearts-other-parts-Rosen/dp/0316480533",
+        genre: [genre.ya,genre.mystery, genre.romance],
+        representation: [representation.gay,],
+    },
+    {
+        title: "Trick",
+        author: "Cara Nox",
+        cover: "https://m.media-amazon.com/images/I/91a9mOq5uwL._SL1500_.jpg",
+        link: "https://www.amazon.com/dp/B0C3Y51B49",
+        genre: [genre.fanstasy, genre.new_adult, genre.urban_fantasy],
+        representation: [representation.ace, representation.gay, representation.demi, representation.lesbian],
     }
+
 ]
 
 
