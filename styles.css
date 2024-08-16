@@ -11,7 +11,7 @@ h1 {
 }
 p {
     padding: 1px;
-    font: Verdana;
+    font: Georgia;
     font-size: 16px;
     margin: 15px;
     margin-left: 8px;
@@ -60,4 +60,16 @@ p {
 .bottom{
     bottom: 0;
     text-align-last: auto ;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blueviolet;
+}
+.green{
+    background-color: greenyellow;
+}
+.yellow{
+    background-color: yellow;
 }

@@ -112,10 +112,24 @@ const books = [
         link: "https://www.amazon.com/dp/B0C3Y51B49",
         genre: [genre.fanstasy, genre.new_adult, genre.urban_fantasy],
         representation: [representation.ace, representation.gay, representation.demi, representation.lesbian],
+    },
+    {
+        title: "Requiem for Immortals",
+        author: "Lee Winter",
+        cover: "https://m.media-amazon.com/images/I/81-ZrC-qHVL._SL1500_.jpg",
+        link: "https://www.amazon.com/Requiem-Immortals-Law-Game-Book-ebook/dp/B01JK1NN2Q/ref=sr_1_1",
+        genre: [genre.thriller, genre.mystery, genre.romance],
+        representation: [representation.lesbian]
     }
 
 ]
 
+const background = [
+    "red",
+    "blue",
+    "green",
+    "yellow"
+]
 
 
 
@@ -180,7 +194,10 @@ document.getElementById('Submit').onclick = function() {
     div.appendChild(paragraph);
     div.appendChild(img);
     div.appendChild(link);
-    document.body.appendChild(div);
+    document.getElementById("Results Container").appendChild(div);
+    
+    const backgroundColor = getRandomResult(background)
+    document.body.classList.add(backgroundColor);
 
 
 }
