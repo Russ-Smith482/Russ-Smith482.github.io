@@ -197,9 +197,11 @@ document.getElementById('Submit').onclick = function() {
     document.getElementById("Results Container").appendChild(div);
     
     const backgroundColor = getRandomResult(background)
+    document.body.classList.remove(...background);
     document.body.classList.add(backgroundColor);
-
-
+    
+    
+    
 }
 
 

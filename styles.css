@@ -1,17 +1,18 @@
 body {
     background-color: #b3e4ea;
     padding: 0px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     padding-bottom: 5px;
     margin-top: -10px;
     color: rgb(196, 14, 153);
 }
 p {
+    
     padding: 1px;
-    font: Georgia;
+    font-family: Verdana;
     font-size: 16px;
     margin: 15px;
     margin-left: 8px;
@@ -42,34 +43,37 @@ p {
     width: 250px;
 }
 .Poof {
+    
+    
     color: #FF4DFF;
     font-size: 30px;
-    display: inline-block;
     margin-top: -8px;
     margin-bottom: -10px;
+    font-family: Verdana;
 }
 .team{
     color: rgb(133, 21, 185);
-    display: inline-block;
     font-size: 25px;
     margin: 8px;
     margin-top: 10px;
     margin-bottom: -5px;
     padding: 3px;
+    font-family: Verdana;
 }
 .bottom{
     bottom: 0;
     text-align-last: auto ;
 }
 .red{
-    background-color: red;
+    background-color: rgb(197, 147, 177);
 }
 .blue{
-    background-color: blueviolet;
+    background-color: rgb(187, 142, 229);
 }
 .green{
-    background-color: greenyellow;
+    background-color: rgb(215, 241, 174);
 }
 .yellow{
-    background-color: yellow;
+    background-color: rgb(251, 251, 122);
 }
+
